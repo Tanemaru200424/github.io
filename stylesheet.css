@@ -195,6 +195,31 @@ header {
   line-height: 1.8;
 }
 
+/* 試遊ボタンの親要素（中央寄せなど） */
+.work-link {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* 試遊ボタン本体 */
+.play-btn {
+  background-color: #239b76; /* 全体のアクセントカラーと統一 */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 40px;
+  border-radius: 50px; /* 丸みのあるボタンで親しみやすさを出す */
+  box-shadow: 0 4px 0 #1a7458; /* 立体感（押しボタン風） */
+  transition: all 0.2s; /* 動きを滑らかに */
+}
+
+/* ホバー（マウスを乗せた時）の動き */
+.play-btn:hover {
+  transform: translateY(2px); /* 少し沈む */
+  box-shadow: 0 2px 0 #1a7458; /* 影を薄くして「押した感」を出す */
+  background-color: #2bbd90; /* 少し明るくする */
+  opacity: 1; /* 元の .btn の opacity: 0.8 を上書きしてハッキリ見せる */
+}
+
 /* =========================================
    フッター
    ========================================= */
