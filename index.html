@@ -91,25 +91,28 @@
 
       <div class="work-content">
         <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1srW4I9Dls" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/knknQGek4Zw" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="work-description">
-          <h3>作品名：2Dシューティングゲーム「カースィ」</h3>
+          <h3>作品名：2Dベルトアクション「勇者の卵」</h3>
           <p class="text-contents">
-            初めて作成した2Dシューティングゲームです。
+            先輩の作品に影響を受け、それを超えるゲームを目標に作成しました。
             <br>【工夫した点】
             <ul>
-              <li>長押し時間を管理することによる自動連射システムを実装しました。</li>
-              <li>獲得スコアに応じて分岐をする敵生成アルゴリズムを実装しました。</li>
-              <li>被撃墜時に自機の位置を初期位置にし、一定時間レイヤーを無敵に変更するようにしました。無敵中は自機が点滅します。</li>
+              <li>敵オブジェクトの子に予測範囲、攻撃オブジェクトの子に攻撃範囲を持たせました。<br>
+                  敵のアニメーションで攻撃予備動作の信号を送った時に予測範囲を表示します。また、攻撃発生の信号を送った時に予測範囲を非表示して攻撃オブジェクトを発生させます。</li>
+              <li>GameManagerにBGMとSEの2つのAudioSourceを子として持たせました。タイトルのUIからこれらのボリュームを変更できるようにしました。<br>
+                  GameManagerはシーンをまたいで破棄されないシングルトンであるため変更したボリュームが全てのシーンで適用されます。</li>
+              <li>TimeScaleを0にすることによる簡単な一時停止を実装しました。アニメーションと物理挙動が止まるためポーズ中に攻撃を受けるといった理不尽は発生しません。<br>
+                  また、一時停止からタイトルに戻ったり、リスタートしたりする時、ゲームオーバーが重なって起きないようにフラグを立てるようにしています。</li>
             </ul>
           </p>
           <div class="work-link">
-            <a href="https://unityroom.com/games/suika_2dshooting" class="btn play-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://unityroom.com/games/the_egg_of_hero" class="btn play-btn" target="_blank" rel="noopener noreferrer">
               UnityRoomで試遊する
             </a>
 
-            <a href="https://github.com/Tanemaru200424/Suika_2DShooting" class="btn github-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Tanemaru200424/The_Egg_of_Hero" class="btn github-btn" target="_blank" rel="noopener noreferrer">
               GitHubでコードを見る
             </a>
   
