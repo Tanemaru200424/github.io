@@ -35,7 +35,7 @@
   <div id="about" class="about-wrapper">
     <div class="container">
       <div class="heading">
-        <h2>ABOUT ME</h2>
+        <h2>自己紹介</h2>
       </div>
       <div class="about-content">
         <div class="about-text">
@@ -57,7 +57,7 @@
   <div id="works" class="lesson-wrapper">
     <div class="container">
       <div class="heading">
-        <h2>Works</h2>
+        <h2>制作物一覧</h2>
       </div>
       
       <div class="work-content">
@@ -123,25 +123,29 @@
 
       <div class="work-content">
         <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1srW4I9Dls" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CDyBkiCAjQ8" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="work-description">
-          <h3>作品名：2Dシューティングゲーム「カースィ」</h3>
+          <h3>作品名：2DシューティングRPG「Explore First Dungeon」</h3>
           <p class="text-contents">
-            初めて作成した2Dシューティングゲームです。
+            元々チーム制作でしたが期日に間に合わなかったため引き継いで個人制作したものです。
             <br>【工夫した点】
             <ul>
-              <li>長押し時間を管理することによる自動連射システムを実装しました。</li>
-              <li>獲得スコアに応じて分岐をする敵生成アルゴリズムを実装しました。</li>
-              <li>被撃墜時に自機の位置を初期位置にし、一定時間レイヤーを無敵に変更するようにしました。無敵中は自機が点滅します。</li>
+              <li>LineRendererをスクリプトで操作して、攻撃範囲等様々な範囲描画を実装しました。勇者の卵では四角の絵を貼り付けているだけでした。より範囲であることを強調するために枠線描画に挑戦しました。<br>
+                  親オブジェクトのScaleやInspectorで指定された値を基にグラデーションを利かせた枠線を描きます。円と長方形の2種類があります。</li>
+              <li>敵、自キャラクターともにレベルで攻撃方法が変化するようにしました。単純なIF分岐で実装しています。キャラクターに各レベルごとの攻撃オブジェクトを登録し、攻撃時にレベルを参照することで攻撃を切り替えます。<br>
+                  これにより少ないキャラクター実装で多くの異なる戦闘体験ができるようにしました。</li>
+              <li>TimeScaleを操作するのではなく、イベントを起こすことで一時停止を実装しました。<br>
+                  TimeScaleで止める場合、止まるべきもの、そうでないものの管理のために何が影TimeScaleの響が受けるのか知る必要があります。Animation等のオプションやdeltaTimeとunscaledTimeの使い分け等を覚える必要があります。<br>
+                  イベントで起こす関数に一時停止の影響を受けてほしい部分をまとめることで一時停止で何をしているのか明らかにしました。</li>
             </ul>
           </p>
           <div class="work-link">
-            <a href="https://unityroom.com/games/suika_2dshooting" class="btn play-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://unityroom.com/games/explore_first_dungeon" class="btn play-btn" target="_blank" rel="noopener noreferrer">
               UnityRoomで試遊する
             </a>
 
-            <a href="https://github.com/Tanemaru200424/Suika_2DShooting" class="btn github-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Tanemaru200424/X68Survivor" class="btn github-btn" target="_blank" rel="noopener noreferrer">
               GitHubでコードを見る
             </a>
   
