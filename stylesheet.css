@@ -158,6 +158,11 @@ header {
   text-align: center;
 }
 
+.work-content {
+  margin-bottom: 80px; /* 次の作品との間隔 */
+  text-align: center;  /* 題名やボタンを中央寄せにする */
+}
+
 .video-container {
   margin-bottom: 30px;
   position: relative;
