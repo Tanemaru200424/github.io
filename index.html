@@ -159,6 +159,47 @@
     </div>
   </div>
 
+  <div id="teamworks" class="lesson-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>協力作品一覧</h2>
+      </div>
+      
+      <div class="work-content">
+        <div class="work-description">
+          <h3>作品名：2Dボスバトルアクション「Black Sword」</h3>
+          <p class="text-contents">
+            ボスバトルをメインとした2Dアクションです。ダッシュ、スーパーダッシュという敵の攻撃をすり抜ける固有システムを活かしてボスの行動に対応することを特徴としています。<br>
+            全4体のボスのうち「ジャイアントスパイダー」、「シールドナイト」、「リザードウォーリア」の3体の企画、開発を行いました。GitHubで閲覧できるブランチのうち名前に「Tanemaru」と含まれている部分が担当箇所です。
+            <br>【工夫した点】
+            <ul>
+              <li>Animatorの現在再生中のステート名を参照して挙動を変化するようにしました。<br>
+                  高難易度を想定しており、多くの行動パターンを実装する必要がありました。そのため、実装、保守しやすいようにAnimatorでキャラクターを制御するようにしました。</li>
+              <li>ジャイアントスパイダーは最初のボスとして単純な行動パターンにしました。ジャンプ3回→突進→360度ビームまたは斬撃のサイクルを繰り返します。<br>
+                  360度ビームは発射位置と着弾位置を参照して絵と当たり判定の長さを動的に変更することで実装しました。ステージの地形を変えても自然な演出になります。</li>
+              <li>シールドナイトはダッシュ、スーパーダッシュに新たな価値を付与するために制作しました。一定の条件を満たすとバリアを張り、放置すると回避困難な突進、攻撃すると必中カウンターを繰り出します。<br>
+                  バリアにダッシュを当てると怯ませることができます。ダッシュが当たった時呼び出されるインターフェースにこの機能を与えることで実装しました。</li>
+              <li>リザードウォーリアは最高難易度ボスとして設計しました。遠、中、近距離に応じた行動パターンをそれぞれ3つ持っています。これらの技から3つを連続で行うことと短い待機を繰り返します。<br>
+                  長さ3の行動パターンの番号配列に0から2の整数をランダムな順で入れます。現在の連続行動数番目にある行動パターン番号とプレイヤーとの距離からどの技を行うか決定するという仕組みです。</li>
+            </ul>
+          </p>
+          <div class="work-link">
+            <a href="https://unityroom.com/games/black_sword" class="btn play-btn" target="_blank" rel="noopener noreferrer">
+              UnityRoomで試遊する
+            </a>
+
+            <a href="https://github.com/Shun-Miyamoto/Black2DAction/tree/main" class="btn github-btn" target="_blank" rel="noopener noreferrer">
+              GitHubでコードを見る
+            </a>
+  
+            <p class="play-notes">※PCブラウザでのプレイを推奨します</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
   <footer>
     <div class="container">
       <p class="copyright">© 2026 kaito</p>
