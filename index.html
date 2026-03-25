@@ -16,6 +16,8 @@
       <div class="header-right">
         <a href="#about">自己紹介</a>
         <a href="#works">制作物一覧</a>
+        <a href="#teamworks">協力作品一覧</a>
+        <a href="#nowmakings">制作中作品一覧</a>
       </div>
     </div>
   </header>
@@ -199,11 +201,48 @@
       
     </div>
   </div>
+
+  <div id="nowmakings" class="lesson-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>制作中作品一覧</h2>
+      </div>
+      
+      <div class="work-content">
+        <div class="work-description">
+          <h3>作品名：2Dジャンプアクション「けーびろぼ！」</h3>
+          <p class="text-contents">
+            シンプルな2Dジャンプアクションに吹き飛ばし攻撃を加えた作品にする予定です。サークルで制作志望者が多い2Dジャンプアクションの作例として制作しています。現在はチュートリアルの仮完成まで進んでいます。
+            <br>【工夫した点】
+            <ul>
+              <li>アクションに関わるゲームオブジェクトを1つのオブジェクトコンテナに格納し、管理しやすくしました。<br>
+                  オブジェクト生成者がコンテナを観測し、生成物を登録します。登録解除は生成物が破棄された時に呼び出されます。一時停止等多くのオブジェクトを対象にする処理を行う際に管理しやすくするためです。</li>
+              <li>制御が複雑なオブジェクトには状態管理用のスクリプトを実装しました。<br>Enum型で状態名を付け制御します。外部から状態変更をする際は直接状態を操作するのではなく関数を呼び出すことで変更するようにしました。</li>
+              <li>SubStateMachineを使用することで、Animatorのステート名を取得せずともアニメーションの変化を追跡できるようにしました。<br>
+                  常にステート名を観測するのは重い処理であると聞いたため、SubStateMachineによる関数呼び出しにしました。</li>
+            </ul>
+          </p>
+          <div class="work-link">
+            <a href="https://unityroom.com/games/black_sword" class="btn play-btn" target="_blank" rel="noopener noreferrer">
+              UnityRoomで試遊する
+            </a>
+
+            <a href="https://github.com/Tanemaru200424/Beginner2DAction" class="btn github-btn" target="_blank" rel="noopener noreferrer">
+              GitHubでコードを見る
+            </a>
+  
+            <p class="play-notes">※PCブラウザでのプレイを推奨します</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
   
   <footer>
     <div class="container">
       <p class="copyright">© 2026 kaito</p>
-      <p class="last-updated">Last Updated: 2026.03.23</p>
+      <p class="last-updated">Last Updated: 2026.03.25</p>
     </div>
   </footer>
 </body>
