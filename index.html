@@ -64,7 +64,7 @@
       
       <div class="work-content">
         <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1srW4I9Dls" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VO8IDStgJUg" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="work-description">
           <h3>作品名：2Dシューティングゲーム「カースィ」</h3>
@@ -75,8 +75,10 @@
               <li>長押し時間を管理することによる自動連射システムを実装しました。<br>
                   弾発射ボタンを押した瞬間に長押し時間をリセットし、UpdateでTime.deltaTimeに依存した数値を加算、一定値を越えたら弾を発射し再びリセットするというサイクルです。</li>
               <li>獲得スコアに応じて分岐をする敵生成アルゴリズムを実装しました。<br>
-                  高スコアほど敵の生成までの時間間隔が短くなり、一定スコア以上は追加で強敵が生成されるようになります。</li>
-              <li>被撃墜時に自機の位置を初期位置にし、一定時間レイヤーを無敵に変更するようにしました。無敵中は自機が点滅します。</li>
+                  高スコアほど敵の生成までの時間間隔が短くなり、一定スコア以上は追加で強敵が生成されるようになります。<br>
+                  また、敵の生成に優先度をつけ、強い敵ばかりが生成されないようにしました。</li>
+              <li>被撃墜時に一定時間レイヤーを無敵に変更するようにしました。無敵中は自機が半透明になります。<br>
+                  コルーチンを使ってSpriteRendererのcolor変更、レイヤー切り替えを行っています。</li>
             </ul>
           </p>
           <div class="work-link">
